@@ -1,0 +1,22 @@
+<html>
+<head>
+<title> Recipe Information></title>
+</head>
+<body bgcolor="#FFD700">
+<font color="red"> 
+{% for val in obj %}  
+<p> Recipe Name : {{val.recipe_name }}
+<p> Recipe : {{val.recipe_text }}
+<p> The First Ingredient is {{ val.Ingredient1 }}</p>
+<p> The Second Ingredient is {{ val.Ingredient2 }}</p>
+<p> The Third Ingredient is {{ val.Ingredient3 }}</p>
+<p> The Fourth Ingredient is {{ val.Ingredient4 }}</p>
+<p> Cost of {{ val.Ingredient1 }} : {{ val.Ingredient1_cost }}</p>
+<p> Cost of {{ val.Ingredient2 }} : {{ val.Ingredient2_cost }}</p>
+<p> Cost of {{ val.Ingredient3 }} : {{ val.Ingredient3_cost }}</p>
+<p> Cost of {{ val.Ingredient4 }} : {{ val.Ingredient4_cost }}</p>
+<p> Total Cost in making the recipe : {{ total_cost }}</p>
+{% endfor %}
+</font>
+</body>
+</html>

@@ -1,0 +1,5 @@
+from django import forms
+from recipe.models import Info
+
+class SearchForm(forms.Form):
+    name = forms.CharField(max_length=40)
