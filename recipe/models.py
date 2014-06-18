@@ -8,10 +8,11 @@ class Info(models.Model):
     Ingredient2 = models.CharField(max_length=30)
     Ingredient3 = models.CharField(max_length=30)
     Ingredient4 = models.CharField(max_length=30)
-    Ingredient1_cost = models.IntegerField()
-    Ingredient2_cost = models.IntegerField()
-    Ingredient3_cost = models.IntegerField()
-    Ingredient4_cost = models.IntegerField()
+    Ingredient1_cost = models.IntegerField(default=0)
+    Ingredient2_cost = models.IntegerField(default=0)
+    Ingredient3_cost = models.IntegerField(default=0)
+    Ingredient4_cost = models.IntegerField(default=0)
+    total = models.IntegerField(default=0)  
     def __unicode__(self):
        return self.recipe_name
    

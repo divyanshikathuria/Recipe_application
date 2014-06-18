@@ -2,12 +2,15 @@
 <head>
 <title> Form </title>
 </head>
-<body>
-<form action="/recipe/display/" method="post">
-{% csrf_token %}
-<p> Recipe Name : 
-<input type= "text"></p>
-<input type="submit" value="Submit" />
+<body bgcolor= "DB7093">  
+{% if error %}
+<p style="color:red"> Please Enter the Recipe Name... </p>
+{% load staticfiles %}
+<img src="{% static "recipe/fruit.jpg" %}" alt="My image"/>
+<form action="/recipe/display/" method="get">
+{{ form.as_p }}
+<p> <input type="submit" value="Here You Go!" > </p>
 </form>
 </body>
 </html>
+
